@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Chapter3</string>
+    <string name="person_name">강예지</string>
+    <string name="radio1">남성</string>
+    <string name="radio2">여성</string>
+    <string name="button1">선택</string>
+    <string name="checkbox1">개인정보수집 동의(선택)</string>
+    <string name="editText1">이름을 입력하세요</string>
+</resources>

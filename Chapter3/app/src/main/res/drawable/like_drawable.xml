@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--버튼이 눌릴 시-->
+    <item android:state_pressed="true"
+        android:drawable="@drawable/like_black"/>
+
+    <!--기본값-->
+    <item android:drawable="@drawable/like_white"/>
+
+</selector>

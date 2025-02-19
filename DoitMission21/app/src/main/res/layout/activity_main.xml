@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D7C4B6"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:windowSoftInputMode="adjustNothing"
+    > <!--키보드가 나타나도 액티비티가 올라가지 않음.-->
+    <!--화면의 요소들을 weight로 크기를 설정했더니 키보드가 올라가면 키보드를 제외한 나머지 공간에서 비율대로 보임.-->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="책 정보 저장 &#38; 조회"
+        android:textColor="#462D2D"
+        android:textSize="34sp"
+        android:typeface="serif" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#9F634E"
+            android:paddingHorizontal="50dp"
+            android:text="입력"
+            android:textColor="#E9DFD6"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#A4AEA5"
+            android:paddingHorizontal="50dp"
+            android:text="조회"
+            android:textColor="#9F634E"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="25">
+
+        <LinearLayout
+            android:id="@+id/SearchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#A3ADA4"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:padding="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/InputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#9F634E"
+            android:orientation="vertical"
+            android:paddingVertical="10dp"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/editTextText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/box"
+                android:ems="10"
+                android:hint="제목"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:typeface="serif" />
+
+            <EditText
+                android:id="@+id/editTextText2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/box"
+                android:ems="10"
+                android:hint="저자"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:typeface="serif" />
+
+            <EditText
+                android:id="@+id/editTextText3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="5"
+                android:background="@drawable/box"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="내용"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="13dp"
+                android:paddingBottom="10dp"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#A4AEA5"
+                android:paddingHorizontal="50dp"
+                android:text="저장"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

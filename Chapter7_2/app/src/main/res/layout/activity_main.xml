@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <!--직접 정의한 위젯이므로 XML 레이아웃에 추가할 때 패키지 이름까지 함께 넣어야 한다.-->
+    <com.example.chapter7_2.MyButton
+        android:id="@+id/button"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:text="시작하기" />
+    <!--상대 레이아웃에서는 layout_centerInParent 속성 값을 true로 하여 화면 가운데에 배치.-->
+</RelativeLayout>
